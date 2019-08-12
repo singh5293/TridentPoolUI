@@ -47,7 +47,7 @@ h3 {
   justify-content: flex-end;
 }
 
-.navbar-nav>li>a {
+.navbar-nav > li > a {
   color: rgba(0, 0, 0, 0.7);
   font-size: 15px;
   /* text-transform: uppercase; */
@@ -56,14 +56,14 @@ h3 {
   margin: 0 10px;
 }
 
-.navbar-nav>li>a:hover,
-.navbar-nav>li>a:focus {
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
   background: none;
   color: #34c6d3;
   text-decoration: none;
 }
 
-.vesco-top-nav ul.navbar-nav>li.active>a {
+.vesco-top-nav ul.navbar-nav > li.active > a {
   color: #34c6d3;
   list-style-type: none;
 }
@@ -194,6 +194,12 @@ form .form-control {
   background-image: url(../assets/images/img2.jpg);
   border-left: 200px solid #fff;
   border-top: 700px solid transparent;
+}
+
+@media screen and (max-width: 600px) {
+  #about-bg-diagonal {
+    background-image: url(../assets/images/img4.jpg);
+  }
 }
 
 #about-content-box {

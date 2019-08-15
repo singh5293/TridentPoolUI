@@ -6,16 +6,15 @@ import { ThunkDispatch } from "redux-thunk";
 import { AnyAction } from "redux";
 import { IApp } from "./Interfaces/UserInterface";
 import styled from "styled-components";
-import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
-import Services from "./components/Services";
-import AboutUs from "./components/AboutUs";
-import Contact from "./components/contact";
+import { Header } from "./components/Header/Header";
+import Services from "./components/Services/Services";
+import AboutUs from "./components/About/AboutUs";
+import Contact from "./components/ContactUs/contact";
 import "normalize.css/normalize.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-import "./styles/styles.css";
+import "./styles/styles.scss";
 
 const Container = styled.div``;
 
@@ -32,7 +31,6 @@ export class App extends React.Component<IApp> {
           <ImageSlider />
           <Services />
           <AboutUs />
-          {/* <Footer /> */}
           <Contact />
         </Container>
       </>

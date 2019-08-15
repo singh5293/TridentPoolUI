@@ -1,6 +1,16 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, useState } from "react";
 
 const Contact: FunctionComponent<{}> = () => {
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+
+  const onSubmit = (e: any) => {
+    e.preventDefault();
+    console.log(fullName, email, phone, message);
+  };
+
   return (
     <>
       <footer>
@@ -42,36 +52,53 @@ const Contact: FunctionComponent<{}> = () => {
               <div className="col-md-6">
                 <div id="contact-right">
                   <h3>Contact Us</h3>
-                  <form action="#">
+                  <form onSubmit={onSubmit}>
                     <input
                       type="text"
-                      name="full-name"
+                      name="fullName"
                       placeholder="Full Name"
                       className="form-control"
+                      value={fullName}
+                      onChange={e => {
+                        setFullName(e.target.value);
+                      }}
                     />
                     <input
                       type="text"
                       name="email"
                       placeholder="Email Address"
                       className="form-control"
+                      value={email}
+                      onChange={e => {
+                        setEmail(e.target.value);
+                      }}
                     />
                     <input
                       type="text"
-                      name="PhoneNumber"
+                      name="Phone"
                       placeholder="phone"
                       className="form-control"
+                      value={phone}
+                      onChange={e => {
+                        setPhone(e.target.value);
+                      }}
                     />
                     <textarea
                       name="message"
                       placeholder="Message..."
                       className="form-control"
+                      value={message}
+                      onChange={e => {
+                        setMessage(e.target.value);
+                      }}
                     />
 
                     <div id="send-btn">
                       <a
                         className="btn btn-lg btn-general btn-white"
-                        href="#"
+                        href="/"
                         role="button"
+                        onClick={onSubmit}
                       >
                         SEND
                       </a>

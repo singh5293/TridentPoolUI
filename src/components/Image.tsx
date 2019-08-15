@@ -1,6 +1,5 @@
 import React, { FunctionComponent } from "react";
 import { IImageProps } from "../Interfaces/UserInterface";
-import { url } from "inspector";
 
 const Image: FunctionComponent<IImageProps> = ({ ImageUrl }) => {
   return (

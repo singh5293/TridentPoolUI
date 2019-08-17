@@ -13,7 +13,7 @@ const Services: FunctionComponent<{}> = () => {
         <div className="container">
           <div className="row">
             {services.map(service => {
-              return <ServicesItem service={service} />;
+              return <ServicesItem key={service.header} service={service} />;
             })}
           </div>
         </div>

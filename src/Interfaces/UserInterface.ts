@@ -7,4 +7,8 @@ export interface IImageProps {
   ImageUrl: string;
 }
 
+export interface IContact {
+  sendEmail: () => {};
+}
+
 //

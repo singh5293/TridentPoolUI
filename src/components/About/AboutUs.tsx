@@ -11,15 +11,10 @@ const AboutUs: FunctionComponent<{}> = () => {
             <div id="about-content-box">
               <div id="about-content-box-outer">
                 <div id="about-content-box-inner">
-                  <div
-                    className="content-title"
-                    data-wow-duration="1s"
-                    data-wow-delay=".5s"
-                  >
+                  <div className="content-title">
                     <h3> About Trident Pool </h3>
                     <div className="content-title-underline" />
                   </div>
-
                   <div id="about-desc">
                     <p>
                       we provide services like infinity pool jacuzzi, and

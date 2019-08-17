@@ -5,7 +5,7 @@ export const NavMenu: FunctionComponent = () => {
   return (
     <ul className="nav navbar-nav">
       {navList.map(item => {
-        return <NavList label={item} />;
+        return <NavList key={item} label={item} />;
       })}
     </ul>
   );

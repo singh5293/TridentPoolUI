@@ -8,3 +8,8 @@ export interface ILogIn extends Action {
 export interface authState {
   loggedIn: boolean;
 }
+
+export interface ISendMail extends Action {
+  type: "SEND_MAIL";
+  payload: any;
+}

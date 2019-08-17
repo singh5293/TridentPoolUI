@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 
-export interface IHeader {
+interface IHeader {
   label: string;
 }
 

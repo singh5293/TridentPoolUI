@@ -57,7 +57,8 @@ export class ContactForm extends React.Component<Iprops, Istate> {
         },
         value: "",
         validation: {
-          required: true
+          required: true,
+          isEmail: true
         },
         valid: false,
         touched: false
@@ -70,13 +71,14 @@ export class ContactForm extends React.Component<Iprops, Istate> {
         },
         value: "",
         validation: {
-          required: true
+          required: true,
+          isNumeric: true
         },
         valid: false,
         touched: false
       },
       message: {
-        elementType: "input",
+        elementType: "textarea",
         elementConfig: {
           placeholder: "Message...",
           type: "text"
@@ -182,14 +184,14 @@ export class ContactForm extends React.Component<Iprops, Istate> {
                 );
               })}
               <div id="send-btn">
-                <a
+                <button
                   className="btn btn-lg btn-general btn-white"
-                  href="/"
                   role="button"
                   onClick={this.onSubmit}
+                  disabled={!this.state.formIsValid}
                 >
                   SEND
-                </a>
+                </button>
               </div>
             </form>
           </div>

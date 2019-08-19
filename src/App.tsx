@@ -13,6 +13,7 @@ import Contact from "./components/ContactUs/contact";
 import "normalize.css/normalize.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Helmet } from "react-helmet";
 
 import "./styles/styles.scss";
 
@@ -26,6 +27,10 @@ export class App extends React.Component<IApp> {
     console.log(this.props);
     return (
       <>
+        <Helmet>
+          <title>TridentPool&Spa</title>
+          <meta name="description" content="Trident Pool and Spa India" />
+        </Helmet>
         <Container>
           <Header />
           <ImageSlider />
